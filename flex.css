@@ -1,0 +1,117 @@
+/*main menu*/
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(font.jpg);
+}
+
+header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu{
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul, 
+.menu ol{  
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu > ul{
+    display: flex;
+    background: rgb(19, 20, 43);
+}
+
+.menu > ul li a{
+    display: block;
+    
+    padding: 15px 30px 15px 30px;
+    font-size: 20px;
+    color:rgb(255, 217, 93);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.menu >ul li:last-child{
+    margin-left: auto;
+}
+
+.menu li a:hover{
+    background: #131320;
+    box-shadow: 1px 2px 5px -2px black;
+    transition: all 0.5s ease;
+}
+
+/*submenu*/
+.menu li ul{
+    position: absolute;
+    min-width: 150px;
+    display: none;
+}
+
+.menu li > ul li a{
+    background: #131320;
+}
+
+.menu li:hover > ul{
+    display: block;
+}
+
+/*modal-popup*/
+
+.modal{
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: rgba(0,0,0,0.5);
+    z-index:100;
+    opacity:0;
+    pointer-events: none;
+}
+
+.modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup{
+    width: 100%;
+    max-width: 300px;
+    margin: 10% auto;
+    padding: 2%;
+    background: rgb(255, 254, 254);
+    border: 2px solid rgb(255, 217, 93);
+}
+
+.popup h3{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    color: #131320;    
+}
+
+.popup p{
+    text-align: center;
+    padding: 0;
+    margin: 4% 0 8% 0;
+    color: #131320;
+}
+
+.popup a{
+    display: block;
+    color: rgb(255, 217, 93);
+    background: #131320;
+    padding: 2%;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+}
